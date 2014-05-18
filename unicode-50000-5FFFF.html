@@ -1,0 +1,17 @@
+<style>*{font:10px arial;text-align:center}td{min-width:15px}</style>
+<table border cellspacing=0 cellpadding=1 id=t>
+<script>
+html="";
+lines=0;
+for(i=0x50000;i<=0x5FFFF;i++){
+  if(!(i%128)){
+    html+="<tr>";
+    lines++;
+  }
+  if(!(lines%128)){
+    
+  }
+  html+="<td>"+String.fromCodePoint(i);
+}
+t.innerHTML=html;
+</script>
