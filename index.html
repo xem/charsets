@@ -2,6 +2,7 @@
 body { font-family: arial; font-size: 14px; width: 830px; margin: 0 auto }
 </style>
 <a href=//github.com/xem/charsets><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<br>
 <h1>Charsets experiments</h1>
 <b>/!\ CPU intensive /!\</b>
 <br>
@@ -34,11 +35,17 @@ body { font-family: arial; font-size: 14px; width: 830px; margin: 0 auto }
 </ul>
 <br>
 <br>
-<h3>The bytes taken by each assigned Unicode character by encoding</h3>
+<h3>How many bytes are used by each assigned Unicode character in each encoding</h3>
 
 <ul>
-<li> <a href=range-encoded-bytes.html>By block</a> (excluding low/high surrogates and private use blocks)
-<li> <a>By code point... (coming soon)</a>
+<li> <a href=range-encoded-bytes.html>By block</a>
+<li> <a href=codepoint-encoded-bytes-1.html>By code point (U+0000-U+40000)</a>
+<li> <a href=codepoint-encoded-bytes-2.html>By code point (U+40000-U+80000)</a>
+<li> <a href=codepoint-encoded-bytes-3.html>By code point (U+80000-U+B0000)</a>
+<li> <a href=codepoint-encoded-bytes-4.html>By code point (U+B0000-U+F0000)</a>
+<li> <a href=codepoint-encoded-bytes-all.txt>By code point (All - txt - 88MB)</a>
+<br>
+(excluding low/high surrogates and private use blocks)
 </ul>
 <br>
 <br>

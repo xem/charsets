@@ -247,7 +247,7 @@ e29=function(l,a,m,d,e,f,p,c,b,g,h,k,n){a=[];for(m in l)if(128>(d=l[m]))a.push(d
 
 html="<h1>How many bytes they take in each encoding?</h1><table border cellspacing=0><th>Range<th>Range name<th>UTF-32<th>UTF-16<th>UTF-8<th>UTF-7<th>UTF-1<th>UTF-EBCDIC<th>GB18030";
 for(i in blocks){
-  html+="<tr><th>0x"+blocks[i][0].toString(16)+"-0x"+blocks[i][1].toString(16)+"<td>"+blocks[i][2]+"<td>4<th>"+(blocks[i][0]<0x10000?2:4)+"<td>"+(blocks[i][1]<=0x7f?1:(blocks[i][1]<=0x7ff?2:(blocks[i][1]<=0xffff?3:4)))+"<td>"+e7(e2(String.fromCodePoint(blocks[i][1]))).length+"<td>"+(blocks[i][1]<=0x9f?1:(blocks[i][1]<=0x415?2:(blocks[i][1]<=0x38e2d?3:4)))+"<td>?<td>"+e29([blocks[i][0]]).length;
+  html+="<tr><th>0x"+blocks[i][0].toString(16)+"-0x"+blocks[i][1].toString(16)+"<td>"+blocks[i][2]+"<td>4<th>"+(blocks[i][0]<0x10000?2:4)+"<td>"+(blocks[i][1]<=0x7f?1:(blocks[i][1]<=0x7ff?2:(blocks[i][1]<=0xffff?3:4)))+"<td>"+e7(e2(String.fromCodePoint(blocks[i][1]))).length+"<td>"+(blocks[i][1]<=0x9f?1:(blocks[i][1]<=0x415?2:(blocks[i][1]<=0x38e2d?3:4)))+"<td>"+(blocks[i][1]<=0x9f?1:(blocks[i][1]<=0x3ff?2:(blocks[i][1]<=0x3fff?3:(blocks[i][1]<=0x40000?4:5))))+"<td>"+e29([blocks[i][0]]).length;
 }
 html+="</table>";
 b.innerHTML+=html;
